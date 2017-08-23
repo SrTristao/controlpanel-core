@@ -18,6 +18,7 @@
         vm.setToken = _setToken;
         vm.removeToken = _removeToken;
         vm.isLoggedIn = _isLoggedIn;
+        vm.hasRole = _hasRole;
 
         var user;
 
@@ -58,6 +59,18 @@
         function _isLoggedIn() {
             return _isValidToken(_getToken());
         }
+
+        function _hasRole(role) {            
+            if (!_isLoggedIn()) {
+            return false;
+            }
+
+            if (typeof role === "string") {
+            role = [role];
+            }
+
+            return role.indexOf(_getTokenData().role) >= 0;
+        };
 
     }
   
