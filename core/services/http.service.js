@@ -33,11 +33,14 @@
             return $http(path, params).then(complete).catch(error);
         }
     
-        function complete(data, status, headers, config) {
+        function complete(data, status, headers, config) {                    
           return data.data;
         }
         
-        function error(error) {
+        function error(error) {          
+          if (error.status === -1) {
+            return 'server undefined';
+          }
           return error.data;
         };
     
