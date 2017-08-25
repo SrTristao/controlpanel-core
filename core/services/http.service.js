@@ -30,7 +30,7 @@
         }
 
         function _put(path, params) {
-            return $http(path, params).then(complete).catch(error);
+            return $http.put(path, params).then(complete).catch(error);
         }
     
         function complete(data, status, headers, config) {                    

@@ -33,7 +33,7 @@
     }
 
     function _updateUser(user) {
-      var url = (API.URL + USER.PUT_USER).format(user._id);
+      var url = (API.URL + USER.PUT_USER).format(user._id);      
       return HTTPService.put(url, user);
     }
 
@@ -44,6 +44,7 @@
 
     function _getListUser() {
       var url = API.URL + USER.GET_LIST_USER;
+      console.log(url);
       return HTTPService.get(url);
     }
   }
