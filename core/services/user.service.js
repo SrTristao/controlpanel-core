@@ -43,8 +43,7 @@
     }
 
     function _getListUser() {
-      var url = API.URL + USER.GET_LIST_USER;
-      console.log(url);
+      var url = API.URL + USER.GET_LIST_USER;      
       return HTTPService.get(url);
     }
   }
