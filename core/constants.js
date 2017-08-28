@@ -13,7 +13,8 @@
         GET_USER: '/admin/user/{0}',
         POST_USER: '/admin/user/',
         DELETE_USER: '/admin/user/{0}',
-        PUT_USER: '/admin/user/{0}'
+        PUT_USER: '/admin/user/{0}',
+        CHANGE_PASSWORD: '/admin/user/changePassword'
     })        
     
 })();

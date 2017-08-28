@@ -21,6 +21,7 @@
     vm.updateUser = _updateUser;
     vm.deleteUser = _deleteUser;
     vm.getListUser = _getListUser;
+    vm.changePassword = _changePassword;
 
     function _getUser(id) {
         var url = (API.URL + USER.GET_USER).format(id);
@@ -43,9 +44,13 @@
     }
 
     function _getListUser() {
-      var url = API.URL + USER.GET_LIST_USER;
-      console.log(url);
+      var url = API.URL + USER.GET_LIST_USER;      
       return HTTPService.get(url);
+    }
+      
+    function _changePassword(passwords) {
+        var url = API.URL + USER.CHANGE_PASSWORD;
+        return HTTPService.post(url, passwords);
     }
   }
 
