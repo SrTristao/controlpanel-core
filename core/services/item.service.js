@@ -20,6 +20,8 @@
     vm.updateItem = _updateItem;
     vm.deleteItem = _deleteItem;
     vm.getListItem = _getListItem;
+    vm.lastInserts = _lastInserts;
+    vm.totItems = _totItems;
 
     function _getItem(id) {
         var url = (API.URL + ITEM.GET_ITEM).format(id);
@@ -43,6 +45,16 @@
 
     function _getListItem(params) {
       var url = (API.URL + ITEM.GET_LIST_ITEM).format(JSON.stringify(params));      
+      return HTTPService.get(url);
+    }
+
+    function _lastInserts() {
+      var url = API.URL + ITEM.LAST_INSERTS;
+      return HTTPService.get(url);
+    }
+
+    function _totItems() {
+      var url = API.URL + ITEM.TOT_ITEMS;
       return HTTPService.get(url);
     }
   }

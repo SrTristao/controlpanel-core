@@ -22,6 +22,8 @@
     vm.deleteUser = _deleteUser;
     vm.getListUser = _getListUser;
     vm.changePassword = _changePassword;
+    vm.lastInserts = _lastInserts;
+    vm.totUsers = _totUsers;
 
     function _getUser(id) {
         var url = (API.URL + USER.GET_USER).format(id);
@@ -51,6 +53,16 @@
     function _changePassword(passwords) {
         var url = API.URL + USER.CHANGE_PASSWORD;
         return HTTPService.post(url, passwords);
+    }
+
+    function _lastInserts() {
+      var url = API.URL + USER.LAST_INSERTS;
+      return HTTPService.get(url);
+    }
+
+    function _totUsers() {
+      var url = API.URL + USER.TOT_USERS;
+      return HTTPService.get(url);
     }
   }
 
