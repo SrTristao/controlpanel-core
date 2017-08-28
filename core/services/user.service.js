@@ -43,8 +43,8 @@
       return HTTPService.delete(url);
     }
 
-    function _getListUser() {
-      var url = API.URL + USER.GET_LIST_USER;      
+    function _getListUser(params) {
+      var url = (API.URL + USER.GET_LIST_USER).format(JSON.stringify(params));      
       return HTTPService.get(url);
     }
       
