@@ -15,7 +15,7 @@
         DELETE_USER: '/admin/user/{0}',
         PUT_USER: '/admin/user/{0}',
         CHANGE_PASSWORD: '/admin/user/changePassword',
-        LAST_INSERTS: '/admin/item/',
+        LAST_INSERTS: '/admin/user/',
         TOT_USERS: '/admin/user/totUsers'        
     })
     .constant('ITEM', {
